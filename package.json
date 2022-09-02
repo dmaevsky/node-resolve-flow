@@ -2,7 +2,7 @@
   "name": "node-resolve-flow",
   "type": "module",
   "description": "Isomorphic node resolve algorithm for any file system (in-browser or Node)",
-  "version": "1.0.0",
+  "version": "0.8.0",
   "main": "src/resolver.js",
   "directories": {
     "test": "tests"
