@@ -11,7 +11,7 @@
   },
   "devDependencies": {
     "ava": "^4.3.3",
-    "conclure": "^2.0.0"
+    "conclure": "^2.1.0"
   },
   "scripts": {
     "test": "ava -v"
