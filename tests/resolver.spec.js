@@ -1,4 +1,6 @@
-import test from 'ava';
+import test from 'node:test';
+import assert from 'node:assert/strict';
+
 import fs from 'fs/promises';
 import { conclude } from 'conclure';
 import { fileURLToPath } from 'url';
@@ -28,11 +30,11 @@ function* loadPkgJSON(url) {
 
 const resolve = resolver({ isFile, loadPkgJSON });
 
-test('Resolve an NPM module', async t => {
+test('Resolve an NPM module', async () => {
   const importee = "conclure";
   const importer = "file:///src/index.js";
 
   const resolved = await run(resolve(importee, importer));
 
-  t.is(resolved, 'file:///node_modules/conclure/src/conclude.js');
+  assert.equal(resolved, 'file:///node_modules/conclure/src/conclude.js');
 });
